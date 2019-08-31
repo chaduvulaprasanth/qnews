@@ -51,5 +51,5 @@ function changeNews(){
 
 }
 
-changeNews()
+changeNews();
 document.addEventListener("keydown",changeNews);
