@@ -31,16 +31,32 @@ var news = [
 
 var curr = 0;
 
-function changeNews(){
-	console.log(curr)
+function changeNews(event){
 
-	document.getElementById("title").innerText = news[curr].title;
-	document.getElementById("sub-title").innerText = news[curr].subtitle;
-	curr += 1;
+	if (event && event.keyCode === 39 || !event) {
+		console.log(curr)
 
-	if (curr > news.length-1) {
+		document.getElementById("title").innerText = news[curr].title;
+		document.getElementById("sub-title").innerText = news[curr].subtitle;
+		curr += 1;
+		if (curr > news.length-1) {
 			curr = 0;
+	
+		}
 	}
+	if (event && event.keyCode === 37) {
+		console.log(curr)
+
+		document.getElementById("title").innerText = news[curr].title;
+		document.getElementById("sub-title").innerText = news[curr].subtitle;
+		curr -= 1;
+		if (curr < 0) {
+			curr = news.length-1;
+	
+		}
+
+	}
+	
 	
 	// var readm = document.createElement('a');
 	// readm.setAttribute = "href";
@@ -51,5 +67,6 @@ function changeNews(){
 
 }
 
+
 changeNews();
-document.addEventListener("keydown",changeNews);
+document.addEventListener("keyup",changeNews);

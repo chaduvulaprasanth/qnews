@@ -64,36 +64,39 @@ a{
 	text-decoration: none;
 }
 /*general css*/
+.sub-title-flex, .flex {
+	display: flex;
+	justify-content: center;
+}
+.flex {
+	display: flex;
+	justify-content: center;
+	margin-top: calc(100vh - 80vh);
+}
+
 p{
 	padding-top: 1rem;
 	color: yellow;
-	text-align: center;
 	font-size: 1.5rem;
 }
-.flex-wrapper {
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	height: calc(100vh - (50vh + 1rem));
 
-}
-.sub-title-flex{
-	display: flex;
-	justify-content: center;
-}
 #title {
 	color: white;
 	font-size: 3rem;
 	font-weight: bold;
-	letter-spacing: 0.06rem;
+	letter-spacing: 0.08rem;
+	line-height: 1.2;
 	width: 50rem;
+	
 }
 #sub-title, #readmore {
 	color: white;
 	font-size: 1.5rem;
 	line-height: 1.5;
-	letter-spacing: 0.06rem;
+	letter-spacing: 0.08rem;
 	width: 50rem;
+	margin-top: 2rem;
+
 }
 
 
